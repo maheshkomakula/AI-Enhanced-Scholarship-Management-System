@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Dashboard | Scholarship Decision Hub</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body class="dashboard-page admin-page">
+	<header class="topbar shell compact">
+		<div class="brand">
+			<span class="brand-mark">AI</span>
+			<div>
+				<strong>Admin Dashboard</strong>
+				<p id="admin-greeting">Review applications and manage scholarship decisions</p>
+			</div>
+		</div>
+		<button id="logout-button" class="button ghost" type="button">Logout</button>
+	</header>
+
+	<main class="shell admin-grid">
+		<section class="grid-4 metrics" id="summary-cards">
+			<article class="metric-card"><span>Total</span><strong id="metric-total">0</strong></article>
+			<article class="metric-card"><span>Approved</span><strong id="metric-approved">0</strong></article>
+			<article class="metric-card"><span>Rejected</span><strong id="metric-rejected">0</strong></article>
+			<article class="metric-card"><span>Average Probability</span><strong id="metric-average">0%</strong></article>
+		</section>
+
+		<section class="grid-2 admin-content">
+			<article class="card">
+				<div class="section-heading">
+					<div>
+						<span class="eyebrow">Review queue</span>
+						<h1>Student applications</h1>
+					</div>
+				</div>
+				<div class="table-wrap">
+					<table class="data-table">
+						<thead>
+							<tr>
+								<th>Student</th>
+								<th>Prediction</th>
+								<th>Probability</th>
+								<th>Status</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody id="review-queue"></tbody>
+					</table>
+				</div>
+			</article>
+
+			<article class="card">
+				<div class="section-heading">
+					<div>
+						<span class="eyebrow">AI insights</span>
+						<h2>Generated reports</h2>
+					</div>
+				</div>
+				<div id="insights-list" class="list-stack"></div>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

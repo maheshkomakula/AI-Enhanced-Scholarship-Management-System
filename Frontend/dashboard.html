@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Dashboard | Scholarship Decision Hub</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body class="dashboard-page">
+	<header class="topbar shell compact">
+		<div class="brand">
+			<span class="brand-mark">AI</span>
+			<div>
+				<strong>Student Dashboard</strong>
+				<p id="student-greeting">Ready to submit your application</p>
+			</div>
+		</div>
+		<button id="logout-button" class="button ghost" type="button">Logout</button>
+	</header>
+
+	<main class="shell dashboard-grid">
+		<section class="grid-3 summary-strip">
+			<article class="metric-card compact-metric">
+				<span>Applications</span>
+				<strong id="student-total">0</strong>
+			</article>
+			<article class="metric-card compact-metric">
+				<span>Latest status</span>
+				<strong id="student-latest-status">-</strong>
+			</article>
+			<article class="metric-card compact-metric">
+				<span>Average probability</span>
+				<strong id="student-average">0%</strong>
+			</article>
+		</section>
+
+		<section class="card">
+			<div class="section-heading">
+				<div>
+					<span class="eyebrow">Application form</span>
+					<h1>Submit scholarship details</h1>
+				</div>
+			</div>
+			<form id="application-form" class="form-grid two-col">
+				<label>
+					Full name
+					<input type="text" name="full_name" required>
+				</label>
+				<label>
+					Email
+					<input type="email" name="email" required>
+				</label>
+				<label>
+					Institution
+					<input type="text" name="institution" required>
+				</label>
+				<label>
+					Course
+					<input type="text" name="course" required>
+				</label>
+				<label>
+					GPA
+					<input type="number" name="gpa" min="0" max="10" step="0.01" required>
+				</label>
+				<label>
+					Attendance %
+					<input type="number" name="attendance" min="0" max="100" step="0.1" required>
+				</label>
+				<label>
+					Family income
+					<input type="number" name="family_income" min="0" step="1" required>
+				</label>
+				<label>
+					Category
+					<select name="category" required>
+						<option value="general">General</option>
+						<option value="ews">EWS</option>
+						<option value="obc">OBC</option>
+						<option value="sc">SC</option>
+						<option value="st">ST</option>
+					</select>
+				</label>
+				<label class="checkbox-row">
+					<input type="checkbox" name="previous_scholarship">
+					Previous scholarship history
+				</label>
+				<label class="checkbox-row">
+					<input type="checkbox" name="extracurricular">
+					Extracurricular involvement
+				</label>
+				<label class="full-width">
+					Supporting documents / notes
+					<textarea name="documents" rows="4" placeholder="Add document links or application notes"></textarea>
+				</label>
+				<button class="button primary full-width" type="submit">Evaluate scholarship eligibility</button>
+				<p id="application-message" class="message full-width"></p>
+			</form>
+		</section>
+
+		<section class="sidebar-stack">
+			<article class="card glass-card result-card">
+				<span class="eyebrow">Prediction result</span>
+				<h2 id="result-title">Waiting for submission</h2>
+				<p id="result-probability">Probability will appear here after prediction.</p>
+				<p id="result-explanation">The system will generate an explanation and recommendation once the form is submitted.</p>
+			</article>
+
+			<article class="card">
+				<div class="section-heading">
+					<div>
+						<span class="eyebrow">Application history</span>
+						<h2>Your submissions</h2>
+					</div>
+				</div>
+				<div id="applications-list" class="list-stack"></div>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

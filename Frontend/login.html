@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login | Scholarship Decision Hub</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body class="auth-page">
+	<main class="auth-shell shell">
+		<section class="auth-copy glass-card">
+			<span class="eyebrow">Welcome back</span>
+			<h1>Sign in to manage scholarship applications.</h1>
+			<p>Students and scholarship officers use the same secure entry point with role-based routing.</p>
+		</section>
+		<section class="auth-form card">
+			<h2>Login</h2>
+			<form id="login-form" class="form-grid">
+				<label>
+					Role
+					<select name="role" required>
+						<option value="student">Student</option>
+						<option value="admin">Admin</option>
+					</select>
+				</label>
+				<label>
+					Email
+					<input type="email" name="email" placeholder="you@example.com" required>
+				</label>
+				<label>
+					Password
+					<input type="password" name="password" placeholder="Enter your password" required>
+				</label>
+				<button class="button primary" type="submit">Login</button>
+				<p id="login-message" class="message"></p>
+			</form>
+			<div class="auth-actions">
+				<button class="button ghost small" type="button" data-toggle-panel="reset-panel">Forgot password</button>
+			</div>
+
+			<section id="reset-panel" class="mini-panel hidden">
+				<h3>Forgot password</h3>
+				<p class="subtle-note">First request a reset code, then enter the code with your new password.</p>
+				<form id="reset-request-form" class="form-grid">
+					<label>
+						Email
+						<input type="email" name="email" placeholder="you@example.com" required>
+					</label>
+					<div class="inline-actions">
+						<button class="button secondary" type="submit">Send reset code</button>
+					</div>
+					<p id="reset-request-message" class="message"></p>
+				</form>
+				<form id="reset-form" class="form-grid compact-gap">
+					<label>
+						Email
+						<input type="email" name="email" placeholder="you@example.com" required>
+					</label>
+					<label>
+						Reset code
+						<input type="text" name="code" placeholder="123456" required>
+					</label>
+					<label>
+						New password
+						<input type="password" name="new_password" placeholder="Enter a new password" required>
+					</label>
+					<button class="button primary" type="submit">Reset password</button>
+					<p id="reset-message" class="message"></p>
+				</form>
+			</section>
+			<p class="form-footer">Need an account? <a href="register.html">Register here</a>.</p>
+			<p class="form-footer subtle">Default admin: admin@scholarship.local / Admin@12345</p>
+		</section>
+	</main>
+</body>
+</html>

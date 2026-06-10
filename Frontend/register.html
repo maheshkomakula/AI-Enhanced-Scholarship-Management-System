@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register | Scholarship Decision Hub</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body class="auth-page">
+	<main class="auth-shell shell">
+		<section class="auth-copy glass-card">
+			<span class="eyebrow">Join the platform</span>
+			<h1>Create a student account and start your scholarship application.</h1>
+			<p>Students can submit academic and financial details and receive AI-backed eligibility insights.</p>
+		</section>
+		<section class="auth-form card">
+			<h2>Register</h2>
+			<form id="register-form" class="form-grid">
+				<label>
+					Full name
+					<input type="text" name="name" placeholder="Your full name" required>
+				</label>
+				<label>
+					Email
+					<input type="email" name="email" placeholder="you@example.com" required>
+				</label>
+				<label>
+					Password
+					<input type="password" name="password" placeholder="Create a password" required>
+				</label>
+				<button class="button primary" type="submit">Create account</button>
+				<p id="register-message" class="message"></p>
+			</form>
+			<p class="form-footer">Already have an account? <a href="login.html">Login here</a>.</p>
+		</section>
+	</main>
+</body>
+</html>

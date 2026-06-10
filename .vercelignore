@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+ML/data/
+ML/scholarship_eligibility_training.ipynb
