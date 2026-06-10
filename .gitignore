@@ -25,3 +25,14 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+# ML artifacts (optional if you don't want to store trained models)
+*.joblib
+
+# Logs
+*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Pytest cache
+.pytest_cache/

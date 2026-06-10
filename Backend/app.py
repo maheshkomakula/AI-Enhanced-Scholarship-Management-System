@@ -17,7 +17,7 @@ except ImportError:  # pragma: no cover - optional during bootstrap
 if load_dotenv is not None:
     load_dotenv(BASE_DIR.parent / ".env")
 
-from routes.api import api_bp
+from Backend.routes.api import api_bp
 
 
 def create_app() -> Flask:

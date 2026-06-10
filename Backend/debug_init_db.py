@@ -3,8 +3,8 @@ import dotenv
 
 dotenv.load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
-from database import init_db
 
+from Backend.database import init_db
 try:
     init_db()
     print('init_db succeeded')

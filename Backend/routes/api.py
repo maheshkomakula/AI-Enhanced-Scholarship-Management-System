@@ -6,16 +6,16 @@ from typing import Any
 from flask import Blueprint, jsonify, request
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from ai_service import generate_llm_text
-from email_service import generate_code, send_reset_email, send_email
+from Backend.ai_service import generate_llm_text
+from Backend.email_service import generate_code, send_reset_email, send_email
 from werkzeug.utils import secure_filename
 import io
 import csv
 import pandas as pd
 import os
 import uuid
-from database import execute, fetch_all, fetch_one, init_db
-from ml_service import model_service
+from Backend.database import execute, fetch_all, fetch_one, init_db
+from Backend.ml_service import model_service
 
 
 api_bp = Blueprint("api", __name__)
