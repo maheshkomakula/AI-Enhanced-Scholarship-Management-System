@@ -42,7 +42,7 @@ python ML/train_model.py
 5. Start the backend:
 
 ```bash
-python Backend/app.py
+python -m Backend.app
 ```
 
 6. Open the app:
